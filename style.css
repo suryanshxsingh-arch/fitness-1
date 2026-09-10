@@ -1293,3 +1293,32 @@ img {
 
     .scroll-indicator {
         display: 
+/* =========================================
+   BUTTON RIPPLE
+========================================= */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.button-ripple {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: scale(0);
+
+    pointer-events: none;
+
+    animation: buttonRipple 0.6s ease-out;
+}
+
+@keyframes buttonRipple {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
